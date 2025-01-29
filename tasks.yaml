@@ -1,0 +1,28 @@
+product_area_strategist_task:
+  description: >
+    Identify and group the overarching product areas based on the MECE framework.
+    Ensure categories are mutually exclusive (no overlaps) and collectively exhaustive (no gaps).
+    Review the defined product areas and assess whether they adhere to the MECE principles. 
+    Adjust categories if overlaps or gaps are identified.
+  expected_output: >
+    A list of clearly defined, MECE product areas with descriptions, validated by stakeholders, as JSON format.
+  agent: product_area_strategist
+
+insights_analyst_task:
+  description: >
+   Analyze each product area to identify specific, 
+   actionable tasks that contribute to achieving the objectives
+   Identify KPIs or metrics to measure the success of each task. 
+   Collaborate with the Strategist to align metrics with product area goals.
+  expected_output: >
+    A detailed task list for each product area, including task descriptions,any dependencies and KPI to follow as JSON format.
+  agent: insights_analyst
+  
+implementer_agent_task:
+  description: >
+    Review the task of Analyst list and refine each task into a set of practical, implementable steps.
+    Analyze the task list to identify dependencies or prerequisites. 
+    Document how tasks are interconnected and create a sequencing plan.
+  expected_output: >
+    A fully fledged report with the main topics in JSON format, without repeting the same information. I want you to be very conscise and accurate on the information provided.
+  agent: implementer_agent
